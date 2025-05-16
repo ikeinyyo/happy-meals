@@ -1,23 +1,71 @@
 @import "tailwindcss";
 
 :root {
+  /* Colores para tema claro */
   --background: #ffffff;
   --foreground: #171717;
-}
+  --foreground-secondary: #ffffff;
+  --background-secondary: #f0fdf4;
+  /* Verde claro para paneles en modo claro */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colores primarios (verde) */
+  --primary-light: #86efac;
+  --primary: #10b981;
+  --primary-dark: #059669;
+
+  /* Altura de la navbar */
+  --navbar-height: 48px;
+
+  /* Colores de acento (azul turquesa) */
+  --accent: #38bdf8;
+  --accent-dark: #0891b2;
+
+  /* Colores secundarios (amarillo) */
+  --secondary: #fbbf24;
+  --secondary-dark: #d97706;
+
+  /* Colores de estado */
+  --success: #10b981;
+  --warning: #fbbf24;
+  --error: #ef4444;
+  --info: #38bdf8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-secondary: #ffffff;
+    --background-secondary: #0f172a;
+    /* Azul oscuro para paneles en modo oscuro */
+
+    /* Ajustes de colores para tema oscuro */
+    --primary-light: #34d399;
+    --primary: #10b981;
+    --primary-dark: #065f46;
+
+    --accent: #38bdf8;
+    --accent-dark: #0891b2;
+
+    --secondary: #fbbf24;
+    --secondary-dark: #d97706;
   }
 }
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-background-secondary: var(--background-secondary);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 
 body {
   background: var(--background);
